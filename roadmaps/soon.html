@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon - SkillBridge</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      background: #111;
+      border-bottom: 1px solid #2b2b2b;
+      padding: 16px 24px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #ff4d4d;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .back {
+      color: white;
+      text-decoration: none;
+      border: 1px solid #333;
+      padding: 8px 14px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      border-color: #ff4d4d;
+      color: #ff4d4d;
+    }
+
+    /* CENTER CONTENT */
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #2a2a2a;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background: #ff4d4d;
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cfcfcf;
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,77,77,0.15);
+      color: #ff6666;
+      font-size: 0.85rem;
+    }
+
+    /* ANIMATION */
+    .pulse {
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">SkillBridge</div>
+    <a class="back" href="../index.html">← Back</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+
+    <div class="card pulse">
+
+      <div class="icon">🚧</div>
+
+      <h1>Coming Soon</h1>
+
+      <p>
+        This roadmap is currently under development.<br>
+        We are building a structured learning path with real-world projects,
+        resources, and job connections.
+      </p>
+
+      <span class="tag">Stay Tuned</span>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
