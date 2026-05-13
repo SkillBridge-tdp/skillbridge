@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillBridge</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#0b0b0b;
+      color:white;
+      min-height:100vh;
+    }
+
+/* NAVBAR */
+
+.navbar{
+  width:100%;
+  background:#111111;
+  border-bottom:1px solid #2b2b2b;
+  padding:16px 24px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+/* LOGO */
+
+.logo{
+  font-size:1.7rem;
+  font-weight:bold;
+  color:#ff4d4d;
+  letter-spacing:1px;
+  min-width:max-content;
+}
+
+/* CENTER SEARCH */
+
+.search-wrapper{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.search-bar{
+  width:100%;
+  max-width:500px;
+}
+
+.search-bar input{
+  width:100%;
+  padding:12px 16px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+  background:#1b1b1b;
+  color:white;
+  font-size:0.95rem;
+  border:1px solid #2f2f2f;
+  transition:0.3s;
+}
+
+.search-bar input:focus{
+  border-color:#ff4d4d;
+  box-shadow:0 0 10px rgba(255,77,77,0.4);
+}
+
+/* PROFILE */
+
+.profile-section{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  min-width:max-content;
+}
+
+.profile-avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#ff4d4d;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:bold;
+  font-size:1rem;
+  color:white;
+}
+
+.profile-name{
+  color:#e5e5e5;
+  font-size:0.95rem;
+  font-weight:600;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+  .search-wrapper{
+    order:3;
+    width:100%;
+  }
+
+  .search-bar{
+    max-width:100%;
+  }
+
+  .profile-name{
+    display:none;
+  }
+}
+
+@media(max-width:480px){
+
+  .navbar{
+    padding:14px 16px;
+  }
+
+  .logo{
+    font-size:1.4rem;
+  }
+
+  .profile-avatar{
+    width:38px;
+    height:38px;
+  }
+
+  .search-bar input{
+    padding:10px 14px;
+  }
+}
+    /* HERO */
+
+    .container{
+      max-width:1400px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .hero{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:18px;
+
+      background:linear-gradient(to right,#ff4d4d,#ff8080);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      max-width:750px;
+      margin:auto;
+      color:#bbbbbb;
+      line-height:1.7;
+      font-size:1.05rem;
+    }
+
+    /* GRID */
+
+    .roadmap-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    /* CARD */
+
+  .card {
+  background:#151515;
+  border:1px solid #292929;
+  border-radius:20px;
+  padding:25px;
+  transition:0.3s ease;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+
+  /* IMPORTANT FIXES */
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+    .card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:4px;
+      background:#ff4d4d;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#ff4d4d;
+      box-shadow:0 12px 30px rgba(255,77,77,0.2);
+    }
+
+    .icon{
+      font-size:2.5rem;
+      margin-bottom:18px;
+    }
+
+    .card h2{
+      font-size:1.4rem;
+      margin-bottom:12px;
+    }
+
+    .card p{
+      color:#c7c7c7;
+      line-height:1.6;
+      font-size:0.95rem;
+    }
+    .card:active {
+  text-decoration: none;
+}
+
+    .tag{
+      display:inline-block;
+      margin-top:18px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,77,77,0.12);
+      color:#ff6666;
+      border:1px solid rgba(255,77,77,0.25);
+      font-size:0.82rem;
+      font-weight:bold;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-right{
+        width:100%;
+        max-width:100%;
+      }
+
+      .hero h1{
+        font-size:2.2rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .card{
+        padding:22px;
+      }
+    }
+
+    @media(max-width:480px){
+
+      .container{
+        padding:30px 15px;
+      }
+
+      .hero h1{
+        font-size:1.8rem;
+      }
+
+      .roadmap-grid{
+        grid-template-columns:1fr;
+      }
+
+      .logo{
+        font-size:1.4rem;
+      }
+
+      .search-bar input{
+        padding:10px 14px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <div class="logo">SkillBridge</div>
+
+  <!-- SEARCH BAR -->
+  <div class="search-wrapper">
+    <div class="search-bar">
+      <input type="text" placeholder="Search roadmaps, skills, languages..." />
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="profile-section">
+    <div class="profile-avatar">A</div>
+    <span class="profile-name">Aryan</span>
+  </div>
+
+</nav>
+  <!-- MAIN CONTENT -->
+
+  <div class="container">
+
+    <section class="hero">
+      <h1>Select Your Career Roadmap</h1>
+
+      <p>
+        Choose a roadmap and start learning with structured paths connected
+        directly to real-world jobs, internships, and developer careers.
+      </p>
+    </section>
+
+   <section class="roadmap-grid">
+
+  <a href="roadmaps/backend.html" class="card">
+    <div class="icon">💻</div>
+    <h2>Backend Development</h2>
+    <p>Learn APIs, databases, authentication, microservices, and scalable systems.</p>
+    <span class="tag">Python • Go • Node.js</span>
+  </a>
+
+  <a href="roadmaps/frontend.html" class="card">
+    <div class="icon">🎨</div>
+    <h2>Frontend Development</h2>
+    <p>Build beautiful responsive interfaces using modern frontend technologies.</p>
+    <span class="tag">React • Vue • UI/UX</span>
+  </a>
+
+  <a href="roadmaps/devops.html" class="card">
+    <div class="icon">☁️</div>
+    <h2>DevOps Engineering</h2>
+    <p>Master cloud platforms, CI/CD pipelines, Docker, and Kubernetes.</p>
+    <span class="tag">AWS • Docker • Linux</span>
+  </a>
+
+  <a href="roadmaps/cybersecurity.html" class="card">
+    <div class="icon">🛡️</div>
+    <h2>Cybersecurity</h2>
+    <p>Explore ethical hacking, penetration testing, and digital security.</p>
+    <span class="tag">Security • Hacking</span>
+  </a>
+
+  <a href="roadmaps/machine-learning.html" class="card">
+    <div class="icon">🧠</div>
+    <h2>Machine Learning</h2>
+    <p>Learn AI, neural networks, deep learning, and intelligent systems.</p>
+    <span class="tag">AI • Data Science</span>
+  </a>
+
+  <a href="roadmaps/blockchain.html" class="card">
+    <div class="icon">🔗</div>
+    <h2>Blockchain</h2>
+    <p>Build decentralized apps and smart contracts in Web3 ecosystem.</p>
+    <span class="tag">Solidity • Web3</span>
+  </a>
+
+  <a href="roadmaps/python.html" class="card">
+    <div class="icon">🐍</div>
+    <h2>Python Roadmap</h2>
+    <p>From basics to automation, backend, scripting, and AI development.</p>
+    <span class="tag">Beginner Friendly</span>
+  </a>
+
+  <a href="roadmaps/golang.html" class="card">
+    <div class="icon">⚡</div>
+    <h2>Golang Roadmap</h2>
+    <p>Build efficient concurrent backend systems and APIs using Go.</p>
+    <span class="tag">Concurrency • APIs</span>
+  </a>
+
+  <a href="roadmaps/rust.html" class="card">
+    <div class="icon">🦀</div>
+    <h2>Rust Roadmap</h2>
+    <p>Learn systems programming with speed, safety, and performance.</p>
+    <span class="tag">Systems • Performance</span>
+  </a>
+
+  <a href="roadmaps/javascript.html" class="card">
+    <div class="icon">🌐</div>
+    <h2>JavaScript Roadmap</h2>
+    <p>Become a modern full-stack developer with JavaScript technologies.</p>
+    <span class="tag">Frontend • Backend</span>
+  </a>
+
+  <a href="roadmaps/networking.html" class="card">
+    <div class="icon">⚙️</div>
+    <h2>Network Engineering</h2>
+    <p>Learn routing, switching, infrastructure, and enterprise networking.</p>
+    <span class="tag">CCNA • Linux</span>
+  </a>
+
+  <a href="roadmaps/devrel.html" class="card">
+    <div class="icon">📢</div>
+    <h2>Developer Relations</h2>
+    <p>Grow communities, create content, and advocate for developers.</p>
+    <span class="tag">DevRel • Community</span>
+  </a>
+
+</section>
+  </div>
+
+</body>
+</html>
